@@ -15,7 +15,8 @@ export async function GET() {
 
     const data = await response.json();
     return NextResponse.json(data);
-  } catch (error) {
+  } catch (error:unknown) {
+    console.error("Unknown error:", error);
     return NextResponse.json({ error: "Failed to get token" }, { status: 500 });
   }
 }
