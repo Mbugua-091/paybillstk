@@ -39,8 +39,7 @@ export async function GET() {
         ShortCode: SHORTCODE,
         ResponseType: "Completed", // Ensures transactions complete even if the confirmation URL is unreachable
         ConfirmationURL: CONFIRMATION_URL, // Only provide the confirmation URL
-        // Exclude the Validation URL or use a placeholder if required by MPESA
-        ValidationURL: "", // Empty or null string if not needed
+        // Removed ValidationURL completely
       }),
     });
 
